@@ -6,15 +6,22 @@ function Home() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      let { data: projects, error } = await supabase
-        .from('projects')
-        .select('*');
-      if (error) console.error('Error fetching projects:', error);
-      else setProjects(projects);
-    };
-    fetchProjects();
-  }, []);
+  const fetchProjects = async () => {
+    const { data: projects, error } = await supabase
+      .from('projects')
+      .select('*');
+
+    if (error) {
+      console.error('Error fetching projects:', error);
+    } else {
+      console.log('Fetched projects:', projects);  // Log the fetched projects
+      setProjects(projects);
+    }
+  };
+
+  fetchProjects();
+}, []);
+
 
   return (
     <div className="container mx-auto p-4">
