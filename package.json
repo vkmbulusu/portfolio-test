@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
     "@supabase/supabase-js": "^1.30.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.435.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
